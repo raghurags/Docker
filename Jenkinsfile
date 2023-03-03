@@ -1,10 +1,6 @@
 pipeline{
     
     agent any 
-    tools {
-    	MVN 'MAVEN_HOME' 
-        JAVA 'JAVA_HOME'
-    }
     stages {
         
         stage('Git Checkout'){
@@ -23,7 +19,7 @@ pipeline{
                 
                 script{
                     
-                    sh 'mvn test'
+                    sh '/opt/apache-maven-3.6.3/mvn test'
                 }
             }
         }
