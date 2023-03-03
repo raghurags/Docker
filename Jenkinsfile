@@ -19,7 +19,7 @@ pipeline{
                 
                 script{
                     
-                    sh '/opt/apache-maven-3.6.3/mvn test'
+                    sh '/opt/apache-maven-3.6.3/bin/mvn test'
                 }
             }
         }
