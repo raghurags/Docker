@@ -1,6 +1,9 @@
 pipeline{
     
-    agent any 
+    agent any
+    tools {
+    	maven 'MAVEN_HOME'
+    } 
     stages {
         
         stage('Git Checkout'){
@@ -19,7 +22,7 @@ pipeline{
                 
                 script{
                     
-                    sh 'mvn clean install'
+                    sh '/opt/apache-maven-3.6.3/bin/mvn clean install'
                 }
             }
         }
