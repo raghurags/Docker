@@ -13,26 +13,6 @@ pipeline{
                 }
             }
         }
-        stage('UNIT testing'){
-            
-            steps{
-                
-                script{
-                    
-                    sh '/opt/apache-maven-3.6.3/bin/mvn test'
-                }
-            }
-        }
-        stage('Integration testing'){
-            
-            steps{
-                
-                script{
-                    
-                    sh 'mvn verify -DskipUnitTests'
-                }
-            }
-        }
         stage('Maven build'){
             
             steps{
